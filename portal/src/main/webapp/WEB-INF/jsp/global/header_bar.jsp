@@ -144,7 +144,9 @@
                         <a href="${samlLogoutUrl}">Sign out</a>
                     </c:when>
                     <c:otherwise>
-                        <a href="j_spring_security_logout">Sign out</a>
+                        <c:url value="/logout" var="logoutUrl" />
+                        <a href="${logoutUrl}">Sign Out</a>
+                        <!--a href="<c:url value="/j_spring_security_logout" />">Sign out</a-->
                     </c:otherwise>
                 </c:choose>
                 &nbsp;&nbsp;

@@ -71,134 +71,134 @@
     
 </head>
 <body>
-  <%--<center>--%>
-  <%--<div id="page_wrapper">--%>
-  <%--<table width="860px" cellpadding="0px" cellspacing="5px" border="0px">--%>
-    <%--<tr valign="top">--%>
-      <%--<td colspan="3">--%>
-        <%--<div id="login_header_wrapper">--%>
-          <%--<div id="login_header_top">--%>
-            <%--<jsp:include page="WEB-INF/jsp/global/header_bar.jsp" flush="true" />--%>
-          <%--</div>--%>
-        <%--</div>--%>
-      <%--</td>--%>
-    <%--</tr>--%>
+  <center>
+  <div id="page_wrapper">
+  <table width="860px" cellpadding="0px" cellspacing="5px" border="0px">
+    <tr valign="top">
+      <td colspan="3">
+        <div id="login_header_wrapper">
+          <div id="login_header_top">
+            <jsp:include page="WEB-INF/jsp/global/header_bar.jsp" flush="true" />
+          </div>
+        </div>
+      </td>
+    </tr>
 
-    <%--<tr valign="top">--%>
-      <%--<td>--%>
-        <%--<div>--%>
+    <tr valign="top">
+      <td>
+        <div>
 
-          <%--<% if (logout_success != null) { %>--%>
-          <%--<div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;width:90%;margin-top:50px">--%>
-            <%--<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>--%>
-            <%--<strong>You are now signed out.   It is recommended that you close your browser to complete the termination of this session.</strong></p>--%>
-          <%--</div>--%>
-          <%--<% } %>--%>
+          <% if (logout_success != null) { %>
+          <div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;width:90%;margin-top:50px">
+            <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+            <strong>You are now signed out.   It is recommended that you close your browser to complete the termination of this session.</strong></p>
+          </div>
+          <% } %>
 
-          <%--<% if (login_error != null) { %>--%>
-          <%--<div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;width:90%;margin-top:50px">--%>
-            <%--<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>--%>
-            <%--<strong>You are not authorized to access this resource.&nbsp;--%>
+          <% if (login_error != null) { %>
+          <div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;width:90%;margin-top:50px">
+            <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+            <strong>You are not authorized to access this resource.&nbsp;
 
-              <%--<% if (authenticationMethod.equals("googleplus")) { --%>
-                    <%--Exception lastException = (Exception) request.getSession().getAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);--%>
-                    <%--if (lastException != null) {--%>
-                        <%--%>--%>
-                            <%--You have attempted to log in as <%= lastException.getMessage() %>.--%>
-                        <%--<%--%>
-                    <%--}--%>
-                 <%--}--%>
-              <%--%>--%>
+              <% if (authenticationMethod.equals("googleplus")) { 
+                    Exception lastException = (Exception) request.getSession().getAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
+                    if (lastException != null) {
+                        %>
+                            You have attempted to log in as <%= lastException.getMessage() %>.
+                        <%
+                    }
+                 }
+              %>
 
-              <%--<!-- removed hard-coded login contact html, instead calling GlobalProperties -->--%>
-              <%--<%= GlobalProperties.getLoginContactHtml() %>--%>
-            <%--</strong></p>--%>
-          <%--</div>--%>
-          <%--<% } %>--%>
+              <!-- removed hard-coded login contact html, instead calling GlobalProperties -->
+              <%= GlobalProperties.getLoginContactHtml() %>
+            </strong></p>
+          </div>
+          <% } %>
 
-          <%--<br>--%>
+          <br>
 
-          <%--<table cellspacing="2px" width="100%">--%>
-            <%--<tr>--%>
-              <%--<td>--%>
-                <%--<% if (authenticationMethod.equals("openid")) { %>--%>
-                  <%--<!-- Simple OpenID Selector -->--%>
-                  <%--<form style="width:  100%;" action="<c:url value='j_spring_openid_security_check'/>" method="post" id="openid_form">--%>
-                  <%--<input type="hidden" name="action" value="verify" />--%>
-                  <%--<p/>--%>
+          <table cellspacing="2px" width="100%">
+            <tr>
+              <td>
+                <% if (authenticationMethod.equals("openid")) { %>
+                  <!-- Simple OpenID Selector -->
+                  <form style="width:  100%;" action="<c:url value='j_spring_openid_security_check'/>" method="post" id="openid_form">
+                  <input type="hidden" name="action" value="verify" />
+                  <p/>
 
-                <%--<% } else if (authenticationMethod.equals("ad") || authenticationMethod.equals("ldap")) { %>--%>
-                  <%--<form name='loginForm' action="<c:url value='j_spring_security_check' />" method='POST'>--%>
-                <%--<% } %>--%>
+                <% } else if (authenticationMethod.equals("ad") || authenticationMethod.equals("ldap")) { %>
+                  <form name='loginForm' action="<c:url value='j_spring_security_check' />" method='POST'>
+                <% } %>
 
-                <%--<fieldset id="login-fieldset">--%>
-                  <%--<legend>--%>
-                      <%--Login to Portal:--%>
-                  <%--</legend>--%>
-                  <%--<p>--%>
-                    <%--<span style="color:#666666;font-family:verdana,arial,sans-serif;font-size:145%">--%>
-                      <%--<%= GlobalProperties.getAuthorizationMessage() %>--%>
-                    <%--</span>--%>
-                  <%--</p>--%>
+                <fieldset id="login-fieldset">
+                  <legend>
+                      Login to Portal:
+                  </legend>
+                  <p>
+                    <span style="color:#666666;font-family:verdana,arial,sans-serif;font-size:145%">
+                      <%= GlobalProperties.getAuthorizationMessage() %>
+                    </span>
+                  </p>
 
-                <%--<% if (authenticationMethod.equals("openid")) { %>--%>
-                  <%--<div id="openid_choice">--%>
-                    <%--<p>Please click your account provider:</p>--%>
-                    <%--<div id="openid_btns"></div>--%>
-                  <%--</div>--%>
-                  <%--<div id="openid_input_area">--%>
-                    <%--<input id="openid_identifier" name="openid_identifier" type="text" value="http://" />--%>
-                    <%--<input id="openid_submit" type="submit" value="Sign-In"/>--%>
-                  <%--</div>--%>
-                  <%--<noscript>--%>
-                    <%--<p>OpenID is a service that allows you to log-on to many different websites using a single identity.--%>
-                    <%--Find out <a href="http://openid.net/what/">more about OpenID</a> and <a href="http://openid.net/get/">how to get an OpenID enabled account</a>.</p>--%>
-                  <%--</noscript>--%>
-                <%--</fieldset>--%>
-                <%--</form>--%>
+                <% if (authenticationMethod.equals("openid")) { %>
+                  <div id="openid_choice">
+                    <p>Please click your account provider:</p>
+                    <div id="openid_btns"></div>
+                  </div>
+                  <div id="openid_input_area">
+                    <input id="openid_identifier" name="openid_identifier" type="text" value="http://" />
+                    <input id="openid_submit" type="submit" value="Sign-In"/>
+                  </div>
+                  <noscript>
+                    <p>OpenID is a service that allows you to log-on to many different websites using a single identity.
+                    Find out <a href="http://openid.net/what/">more about OpenID</a> and <a href="http://openid.net/get/">how to get an OpenID enabled account</a>.</p>
+                  </noscript>
+                </fieldset>
+                </form>
 
-                <%--<% } else if (authenticationMethod.equals("saml")) { %>--%>
-                  <%--<p>--%>
-                    <%--<!-- removed the hard-coded saml registration html and calling GlobalProperties instead -->--%>
-                    <%--<button id="saml_login_button" type="button" class="btn btn-danger btn-lg" onclick="window.location = 'saml/login?idp=<%= GlobalProperties.getSamlIdpMetadataEntityid() %>'" >--%>
-                    <%--<%= GlobalProperties.getLoginSamlRegistrationHtml() %></button>--%>
-                  <%--</p>--%>
-                <%--</fieldset>--%>
+                <% } else if (authenticationMethod.equals("saml")) { %>
+                  <p>
+                    <!-- removed the hard-coded saml registration html and calling GlobalProperties instead -->
+                    <button id="saml_login_button" type="button" class="btn btn-danger btn-lg" onclick="window.location = 'saml/login?idp=<%= GlobalProperties.getSamlIdpMetadataEntityid() %>'" >
+                    <%= GlobalProperties.getLoginSamlRegistrationHtml() %></button>
+                  </p>
+                </fieldset>
 
-                <%--<% } else if (authenticationMethod.equals("googleplus")) { %>--%>
-                  <%--<p>--%>
-                    <%--<button onclick="window.location = 'auth/google'" style="padding: 0; border:none; background: none" >--%>
-                        <%--<!-- we need alt != "Google+" because otherwise it gets hidden by Ad Block Plus chrome plugin -->--%>
-                      <%--<IMG alt="cBioPortal Google+ Log-in" src="images/login/googleplus_signin.png"  />--%>
-                    <%--</button>--%>
-                  <%--</p>--%>
-                <%--</fieldset>--%>
+                <% } else if (authenticationMethod.equals("googleplus")) { %>
+                  <p>
+                    <button onclick="window.location = 'auth/google'" style="padding: 0; border:none; background: none" >
+                        <!-- we need alt != "Google+" because otherwise it gets hidden by Ad Block Plus chrome plugin -->
+                      <IMG alt="cBioPortal Google+ Log-in" src="images/login/googleplus_signin.png"  />
+                    </button>
+                  </p>
+                </fieldset>
 
-                <%--<% } else if (authenticationMethod.equals("ad") || authenticationMethod.equals("ldap")){ %>--%>
-                  <%--<div>--%>
-                    <%--<label for=username>Username: </label> <input type='text' id='username' name='j_username' value=''>  <br/>--%>
-                    <%--<label for=password>Password: </label> <input type='password' name='j_password' /> <br/>--%>
-                    <%--<input name="submit" type="submit" value="submit" />--%>
-                  <%--</div>--%>
-                <%--</fieldset>--%>
-                <%--</form>--%>
-                <%--<% } %>--%>
+                <% } else if (authenticationMethod.equals("ad") || authenticationMethod.equals("ldap")){ %>
+                  <div>
+                    <label for=username>Username: </label> <input type='text' id='username' name='j_username' value=''>  <br/>
+                    <label for=password>Password: </label> <input type='password' name='j_password' /> <br/>
+                    <input name="submit" type="submit" value="submit" />
+                  </div>
+                </fieldset>
+                </form>
+                <% } %>
 
-              <%--</td>--%>
-            <%--</tr>--%>
-          <%--</table>--%>
-        <%--</td>--%>
-      <%--</tr>--%>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
 
-      <%--<tr>--%>
-        <%--<td colspan="3">--%>
-          <%--<jsp:include page="WEB-INF/jsp/global/footer.jsp" flush="true" />--%>
-        <%--</td>--%>
-      <%--</tr>--%>
+      <tr>
+        <td colspan="3">
+          <jsp:include page="WEB-INF/jsp/global/footer.jsp" flush="true" />
+        </td>
+      </tr>
 
-    <%--</table>--%>
-  <%--</div>--%>
-  <%--</center>--%>
+    </table>
+  </div>
+  </center>
 
   <jsp:include page="WEB-INF/jsp/global/xdebug.jsp" flush="true" />
 
@@ -219,18 +219,16 @@
   <div class="main-div">
 
       <div class="logo">
-					<span class="">1
+					<span class="">
 						<img class="logo-tree" src="images/logo.png" alt="logo" />						
 					</span>
           <span class="logo-text">
-						<img class="logo-tracer" src="images/logo_tx.gif" alt="Tracer" />2
-						<img class="logo-x" src="images/x.png" alt="X" />3						
+						<img class="logo-tracer" src="images/logo_tx.gif" alt="Tracer" />
+						<img class="logo-x" src="images/x.png" alt="X" />	
 					</span>
-          <img class="logo-galapagos logo-flip" src="images/galapagos.png" alt="Galapagos" />4
+          <img class="logo-galapagos logo-flip" src="images/galapagos.png" alt="Galapagos" />
       </div>
 
-      </br>
-      </br>
       </br>
       </br>
 
@@ -239,37 +237,28 @@
           <div style="display: block; ">
               <h3 class="title" >Login to explore the data </h3>
           </div>
-          </br>
-          </br>
 
 
           <div class="login-form">
 
               <form class="login-form"  action="<c:url value='j_spring_security_check' />" method='POST'>
 
-                  <div style="margin-left: -45px;">
+                  <div style="margin-left: -20px;">
                       <input type='text' id='username' name='j_username' placeholder="Username" value=''>  <br/>
                       <input type='password' name='j_password' placeholder="Password"/> <br/>
 
                       </br>
-                      </br>
 
-                      <input style="margin-left: 30px; background-color: #66b1db" class="button wide primary" name="submit" type="submit" value="LOG IN" />
+                      <input style="margin-left: 0px; background-color: #66b1db" class="button wide primary" name="submit" type="submit" value="LOG IN" />
                   </div>
 
               </form>
 
           </div>
 
-          <%--<ul class="actions special">--%>
-          <%--<li><a href="#" class="button wide primary">LOG IN</a></li>--%>
-          <%--</ul>--%>
-
       </div>
 
 
-      </br>
-      </br>
       </br>
       </br>
       <p style="color: #66b1db">

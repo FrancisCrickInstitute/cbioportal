@@ -107,7 +107,7 @@
                 <artifactItem>
                   <groupId>com.github.franciscrickinstitute</groupId>
                   <artifactId>cbioportal-frontend</artifactId>
-                  <version>f64b9783c928f0b462042fa5a88b6315b07a912a</version>
+                  <version>e66ed77174908c7eca27b806760dbeba9aa951e4</version>
                   <type>jar</type>
                   <outputDirectory>.</outputDirectory>
                   <excludes>*index*</excludes>

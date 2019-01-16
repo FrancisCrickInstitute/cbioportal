@@ -156,7 +156,7 @@
         </sec:authorize>
 
         <c:if test="${rightLogo != ''}">
-            <img id="institute-logo" src="<c:url value="${rightLogo}"/>" alt="Institute Logo" />
+            <a id="cbioportal-logo" href="index.do"><img src="<c:url value="/images/galapagos.png"/>" alt="Galapagos" /></a>
         </c:if>
         </div>
 

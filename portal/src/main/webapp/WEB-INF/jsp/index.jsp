@@ -45,7 +45,7 @@
     String selectedSampleIds =
         (String) request.getAttribute(QueryBuilder.CASE_IDS);
     if (siteTitle == null) {
-        siteTitle = "cBioPortal for Cancer Genomics";
+        siteTitle = "Galapagos for Cancer Genomics";
     }
 
 %>

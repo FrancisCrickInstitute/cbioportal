@@ -207,13 +207,7 @@
   <div class="main-div">
 
       <div class="logo">
-					<span class="">
-						<img class="logo-tree" src="images/logo.png" alt="logo" />						
-					</span>
-          <span class="logo-text">
-						<img class="logo-tracer" src="images/logo_tx.gif" alt="Tracer" />
-						<img class="logo-x" src="images/x.png" alt="X" />	
-					</span>
+          <img class="logo-tree" src="images/tracerx-logo.png" alt="" />
           <img class="logo-galapagos logo-flip" src="images/galapagos.png" alt="Galapagos" />
       </div>
 

@@ -36,7 +36,8 @@ String siteTitle = GlobalProperties.getTitle() + "::Tutorials";
 
 <%@ page import="org.mskcc.cbio.portal.servlet.QueryBuilder" %>
 <%@ page import="org.mskcc.cbio.portal.util.GlobalProperties" %>
-<%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <t:template title="<%= siteTitle %>" defaultRightColumn="true" fixedWidth="true">
 
@@ -58,6 +59,13 @@ String siteTitle = GlobalProperties.getTitle() + "::Tutorials";
 
         <hr/>
         
+        
+        <h2>New Developed Features Demo</h2>
+        <video width="720" controls>
+            <source src="<c:url value="/images/galapagos-demo-v3-elq.mp4"/>" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
         <h2>Tutorial #1: Single Study Exploration</h2>
         <iframe src="https://docs.google.com/presentation/d/1_OGK69lO4Z62WaxHHkNYmWvY0LQN2v0slfaLyY1_IQ0/embed?start=false&loop=false&delayms=60000" frameborder="0" width="720" height="434" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         <hr/>
@@ -69,6 +77,8 @@ String siteTitle = GlobalProperties.getTitle() + "::Tutorials";
         <h2>Tutorial #3: Patient View</h2>
         <iframe src="https://docs.google.com/presentation/d/1Jr_2yEfgjKBn4DBiXRk4kmhIbtsRp6gd0iD3k1fIUUk/embed?start=false&loop=false&delayms=60000" frameborder="0" width="720" height="434" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
+        
+        
         <div id="reactRoot" class="hidden"></div>
 
 

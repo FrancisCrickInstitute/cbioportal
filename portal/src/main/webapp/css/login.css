@@ -3579,7 +3579,11 @@ body.is-preload #header:after {
 }
 
 .logo{
-    margin: -50px 0px 0px -220px;
+    margin-top: -130px;
+    margin-bottom: -30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo-text{
@@ -3588,7 +3592,9 @@ body.is-preload #header:after {
 }
 
 .logo-tree{
-    width: 100px;
+
+    margin: 0px 0px -30px -10px;
+    width: 250px;
 
     animation-duration: 1.0s;
     animation-name: fadeInToRight;
@@ -3596,15 +3602,15 @@ body.is-preload #header:after {
 }
 .logo-tracer{
 
-    width: 100px;
-    margin: 80px 0px -30px -150px;
+    width: 250px;
+    margin: 0px 0px 0px 0px;
 
 }
 .logo-x{
 
-    width: 20px;
-    margin: 100px 0px -10px 0px;
-    padding: 10px 0px 0px 0px;
+    width: 40px;
+    margin: -10px 0px 0px 0px;
+    padding: -10px 0px 0px 0px;
 
     animation-duration: 1.0s;
     animation-name: fadeInToBottom;
@@ -3612,8 +3618,13 @@ body.is-preload #header:after {
 
 }
 .logo-galapagos{
-    width: 200px;
-    margin: 20px 0px 0px 320px;
+
+    display: block;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-left: 100px;
 
     animation: fadeInToLeft 1.0s cubic-bezier(.57,.07,.52,.95), flipinx 1.0s 2s cubic-bezier(.57,.07,.52,.95);
 

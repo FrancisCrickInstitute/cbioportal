@@ -60,7 +60,7 @@ String siteTitle = GlobalProperties.getTitle() + "::Tutorials";
         <hr/>
         
         
-        <h2>New Developed Features Demo</h2>
+        <h2>Galapagos: Demonstration of new developed features</h2>
         <video width="720" controls>
             <source src="<c:url value="/images/galapagos-demo-v3-elq.mp4"/>" type="video/mp4">
             Your browser does not support the video tag.
